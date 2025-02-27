@@ -51,14 +51,15 @@ Los microfrontends en Angular se realizan mediante el plugin oficial de Module F
 
 # Observaciones 
 
-- este poryecto esta basado en la ultima version de Angular (19) el cual los microfrontend
+- este poryecto esta basado en la ultima version de Angular (19) el cual los microfrontend son Stalone Component
 - Se puede implementar el plugin tanto en JavaScript como en TypeScript.
 - Soporta el enrutamiento de aplicaciones Angular.
-- en este proyecto se compartio un servicio llamado `UserService` entre el mf2 y mf3 
+- en este proyecto se compartio un servicio llamado `UserService` entre el mf2 y mf3 mediante Rxjs
 - en el Host se creo el layout que envuelve los Microfrontend
 - Tambien los estilos estan Centralizados en el Host
 - Proveder modulos transversales como HttpClient debe estar tanto como microfrontend o Host 
--
+- el interceptores Http son a nivel de Host para que estos puedan ser ejecutados
+
 es Ideal para Aplicaciones Web Robustas 
 
 # Documentación
