@@ -1,0 +1,14 @@
+nav,footer {
+    width: 100vw;
+    background-color: black;
+    color: white;
+    padding: 20;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+ 
+    height: calc(100vh - 140px);
+}

@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>Listado de usuarios</h1>
+  <div class="table">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Avatar</th>
+          <th scope="col">Nombre de usuario</th>
+          <th scope="col">Detalles</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (user of users(); track $index) {
+        <tr>
+          <td>
+            <img
+              src="{{ user.avatar_url }}"
+              alt="Avatar"
+              class="circular-image"
+            />
+          </td>
+          <td>{{ user.url | username }}</td>
+          <td>
+            <button type="button" class="btn btn-primary" (click)="viewDetails(user.url)">Ver detalles</button>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Listado de seguidores</h1>
+  <div class="table">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Avatar</th>
+          <th scope="col">GitHub</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (user of users$ | async ; track $index) {
+        <tr>
+          <td>
+            <img
+              src="{{ user.avatar_url }}"
+              alt="Avatar"
+              class="circular-image"
+            />
+          </td>
+          <td><a [href]="user.url" target="_blank">{{user.url}}</a></td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

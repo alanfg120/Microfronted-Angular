@@ -1,0 +1,17 @@
+
+.large {
+    width: 100px;
+    height: 100px;
+}
+
+.card {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}

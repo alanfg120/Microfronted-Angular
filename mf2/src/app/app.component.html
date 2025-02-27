@@ -1,0 +1,29 @@
+<div *ngIf="user$ | async as user" class="container">
+  <h1>Detalles del usuario</h1>
+
+  <div class="card">
+    <img [src]="user.avatar_url" alt="Avatar" class="circular-image large" />
+    <div class="card-body">
+      <h5 class="card-title">{{ user.name }}</h5>
+      <h5 class="card-title">{{ username }}</h5>
+      <p class="card-text">{{ user.company }}</p>
+      <p class="card-text">{{ user.location }}</p>
+      <p class="card-text">
+        {{ user.followers | followers }}
+        <a class="link" (click)="viewFollower()">ver segidores</a>
+      </p>
+      <a [href]="user.html_url" class="btn btn-primary" target="_blank"
+        >Ver perfil</a
+      >
+      <!-- la ruta del Inteceptor es /src/app/interceptor-error  y se ejecuta en el Host y no en los Microfrontend-->
+      <button
+        class="btn btn-danger"
+        style="margin-left: 3px"
+        target="_blank"
+        (click)="showError()"
+      >
+        Ejecutar Interceptor de error
+      </button>
+    </div>
+  </div>
+</div>
